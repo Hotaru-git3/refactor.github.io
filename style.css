@@ -1,0 +1,629 @@
+:root{
+  --bg:#FBF7E6;
+  --red:#B02018;
+  --yellow:#FFD05C;
+  --brown:#8f3f22;
+  --white:#ffffff;
+  --text:#222;
+  --line:#e4d4a8;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:linear-gradient(to bottom,#f4efe2,#fbf7e6);
+  color:var(--text);
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  background:var(--bg);
+  padding-bottom:90px;
+}
+.page.active{display:block;}
+
+.content{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.topbar{
+  background:var(--brown);
+  color:white;
+  padding:14px 20px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.topbar-inner{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* REVISI TERAKHIR: GEDEIN TOMBOL BACK */
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;        
+  align-items: center;
+  padding: 8px; /* Tambahin area klik biar gak meleset */
+  margin-left: -8px; /* Biar posisi icon tetep di pojok walau ada padding */
+}
+
+.back-btn svg {
+  width: 24px !important; /* Gedein ukuran icon panahnya */
+  height: 24px !important;
+  stroke-width: 2.5px; /* Biar garis panahnya lebih tebel & jelas */
+}
+
+/* SPLASH */
+.splash{
+  height: 100vh;
+  max-height: 100vh; 
+  overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    linear-gradient(rgba(176,32,24,0.62), rgba(176,32,24,0.62)),
+    url("img/BAKSOMERCON.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.splash-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+#splashPage {
+  padding-bottom: 0 !important;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#loginPage,
+#registerPage {
+  padding-bottom: 0 !important;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.splash-logo{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  background:rgba(176,32,24,0.88);
+  border:4px solid white;
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+}
+
+.splash-logo img{
+  width:200%;
+  height:200%;
+  object-fit:contain;
+}
+
+.tap-btn{
+  margin-top:40px;
+  padding:18px 35px;
+  border:none;
+  border-radius:999px;
+  background:var(--yellow);
+  color:var(--red);
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 8px 200px rgba(0,0,0,0.15);
+  font-size: 23px;
+}
+
+/* AUTH */
+.auth-bg{
+  min-height:100vh;
+  height: 100vh; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(rgba(176,32,24,0.6),rgba(176,32,24,0.6)),
+  radial-gradient(circle,#efb096,#b74e32 60%,#7a241c);
+}
+
+.auth-card{
+  background:#fff8ec;
+  padding:30px;
+  border-radius:20px;
+  width:340px;
+  text-align:center;
+}
+
+.circle-logo{
+  width:120px;
+  height:90px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+  margin-bottom:12px;
+}
+
+.circle-logo img{width:100%;height:100%;object-fit:cover;}
+
+.input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  margin-top:10px;
+  background:white;
+}
+
+.btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:20px;
+  margin-top:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.btn-red{background:var(--red);color:white;}
+.btn-yellow{background:var(--yellow);color:var(--red);}
+.btn-white{background:white;border:1px solid var(--red);color:var(--red);}
+
+.link{
+  display:block;
+  margin-top:12px;
+  font-size:13px;
+  color:var(--red);
+  text-decoration:none;
+}
+
+/* SEARCH */
+.search{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  margin-bottom:12px;
+}
+
+/* PROMO */
+.promo{
+  background: linear-gradient(90deg, rgba(211,156,25,0.75), rgba(255,213,91,0.85)),
+              url('img/BGesteh.jpg.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.promo-text{
+  font-size:22px;
+  font-weight:bold;
+  color:#7e2e11;
+}
+
+.promo-img{
+  width:160px;
+  height:100px;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.promo-img img{
+  width:100%;
+  height:100%;
+  object-fit:contain; 
+  mix-blend-mode: multiply; 
+}
+
+/* MENU FAVORIT */
+.menu-row{
+  display:flex;
+  gap:13px;
+  overflow-x:auto;
+  margin-bottom:18px;
+  padding-bottom:4px;
+}
+
+.menu-round{
+  min-width:180px;
+  background:white;
+  border-radius:16px;
+  padding:18px;
+  text-align:center;
+  border:1px solid var(--line);
+}
+
+.round-pic{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+  margin-bottom:15px;
+}
+
+.round-pic img{width:100%;height:100%;object-fit:cover;}
+
+/* MENU GRID */
+.menu-wrapper{
+  background:transparent;
+  padding:0px;
+  border-radius:14px;
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+/* --- SOLUSI MENU BIAR SEJAJAR --- */
+.menu-item{
+  background:white;
+  border-radius:20px;
+  padding:15px;
+  border: 20px solid var(--red);
+  overflow: hidden;
+  display: flex;             /* Bikin jadi flexbox */
+  flex-direction: column;    /* Ngalir dari atas ke bawah */
+}
+
+.menu-thumb{
+  height:300px;
+  border-radius:14px 14px 14px 14px;
+  overflow:hidden;
+  margin-bottom:20px;
+  width: 100%;        
+  min-width: unset;
+}
+
+.menu-thumb img{width:100%;height:100%;object-fit:cover;}
+
+/* Bikin info menu ambil sisa ruang kosong */
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+}
+
+.menu-info h4{color:var(--red);margin-bottom:6px;}
+.menu-info p{font-size:12px;margin-bottom:6px;color:#555;}
+
+.price{
+  font-weight:bold;
+  color:var(--red);
+  margin-top: auto; /* Ini kunci biar harganya mentok ke bawah sejajar */
+}
+
+.mini-row{
+  display:flex;
+  gap:6px;
+  margin-top:8px;
+}
+
+.mini-btn{
+  flex:1;
+  padding:8px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.mini-red{background:var(--red);color:white;}
+.mini-yellow{background:var(--yellow);color:var(--red);}
+
+/* CARD */
+.card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:14px;
+}
+
+/* DETAIL */
+/* DETAIL (UDAH DIBIKIN MAKIN PREMIUM ALA GOFOOD/GRAB) */
+.detail-image {
+  width: 100%;
+  max-width: 1100px;
+  height: 320px; /* Gambarnya ditarik dikit biar lebih menggugah selera */
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f2e1c7;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bikin efek card numpuk di atas gambar (Overlap) */
+#detailPage .content {
+  position: relative;
+  z-index: 10;
+  margin-top: -50px; /* Tarik div ke atas biar numpuk sama gambar */
+  padding-top: 0;
+}
+
+#detailPage .card {
+  border-radius: 24px; /* Ujungnya lebih melengkung modern */
+  padding: 30px 20px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.12); /* Bayangan soft biar pop-out */
+  border: none;
+  text-align: center; /* Teks ditengahin biar rapi dan elegan */
+  background: white;
+}
+
+/* Styling Khusus Teks di Halaman Detail */
+#detailTitle {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+
+#detailDesc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+#detailPrice {
+  font-size: 28px !important; /* Harga dibikin mentereng */
+  color: var(--red) !important;
+  font-weight: 900 !important;
+  margin-bottom: 25px !important;
+}
+
+/* Bikin tombolnya lebih proporsional */
+#detailPage .btn {
+  border-radius: 14px; 
+  padding: 15px;
+  font-size: 15px;
+}
+
+.small-text {
+  font-size: 14px;
+  color: #665b55;
+  line-height: 1.6;
+}
+
+/* ADDRESS / STATUS */
+.row{display:flex;gap:10px;}
+.row .input{margin-top:0;}
+
+.map-box{
+  width:100%;
+  height:220px;
+  border-radius:12px;
+  border:2px solid #bbd7b4;
+  background:linear-gradient(135deg,#d8efd3,#eef8ea);
+  position:relative;
+  overflow:hidden;
+  margin:12px 0;
+}
+
+.status-label{
+  background:var(--red);
+  color:white;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+.summary-line{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.total{
+  padding-top:10px;
+  border-top:1px solid var(--line);
+  color:var(--red);
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* PROFILE */
+.profile-head{
+  background:var(--red);
+  color:white;
+  border-radius:14px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.avatar{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  overflow:hidden;
+  background:white;
+}
+
+.avatar img{width:100%;height:100%;object-fit:cover;}
+
+.list-btn{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:var(--red);
+  border:none;
+  color:white;
+  border-radius:10px;
+  text-align:left;
+  cursor:pointer;
+}
+
+/* NAV */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:var(--brown);
+  display:flex;
+  justify-content:center;
+  padding:15px; 
+  z-index:999;
+}
+
+.bottom-nav-inner{
+  display:flex;
+  justify-content: space-around; 
+  align-items: center;
+  width:100%;
+  max-width:1100px;
+}
+
+.nav-btn{
+  background:none;
+  border:none;
+  color:#f8e5cf;
+  cursor:pointer;
+  font-weight:500;
+  font-size:12px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-btn.active{
+  color:var(--yellow);
+  font-weight:bold;
+}
+
+
+.btn-white.active-pay {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+/* --- SOLUSI HALAMAN TENGAH BUAT SEMUA UKURAN LAYAR --- */
+/* Gua taro di luar @media biar di HP tetep jalan */
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Nengahin vertikal */
+  align-items: center;     /* Nengahin horizontal */
+  min-height: calc(100vh - 150px); /* Bikin wadahnya tinggi biar kerasa tengah */
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+.checkout-content > div, 
+.checkout-content > button {
+  width: 100%; 
+}
+
+/* ====================================================
+   RESPONSIVE UNTUK MOBILE
+==================================================== */
+@media (max-width:768px){
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+  }
+  
+  .menu-item {
+    padding: 10px;
+    border-width: 8px; 
+    border-radius: 12px;
+  }
+  
+  .menu-thumb {
+    height: 110px; 
+    margin-bottom: 10px;
+  }
+  
+  .menu-info h4 { font-size: 13px; }
+  .menu-info p { font-size: 10px; margin-bottom: 6px; }
+  
+  /* Bikin harga mobile ga ketimpa */
+  .price { font-size: 14px; margin-bottom: 8px; margin-top: auto; }
+  .mini-btn { padding: 6px; font-size: 11px; }
+
+  .menu-round { min-width: 120px; padding: 10px; }
+  .round-pic { width: 70px; height: 70px; }
+
+  .detail-image{height:260px;}
+  .row{flex-direction:column;}
+  .promo-text{font-size:18px;}
+}
+
+.menu-round:active {
+  transform: scale(0.95);
+}
+
+/* Animasi Loading */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--red);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Aturan ekstra cuma buat Desktop */
+@media (min-width: 769px) {
+  /* Ini yang ngebatesin gambarnya di Desktop biar ga over-stretch */
+  .detail-image { 
+    max-width: 600px; 
+    margin: 0 auto; 
+    border-radius: 0 0 16px 16px; 
+  }
+  
+  .map-box { max-width: 600px; margin: 0 auto 20px; }
+  .checkout-content { padding-bottom: 100px; }
+}
